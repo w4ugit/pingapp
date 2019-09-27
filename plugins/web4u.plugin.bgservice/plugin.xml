@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="web4u.plugin.bgservice"
+        version="1.0">
+
+    <name>BgService</name>
+
+    <engines>
+        <engine name="cordova" version=">=3.4.0"/>
+    </engines>
+
+    <asset src="www/bgservice.js" target="js/bgservice.js"/>
+
+    <js-module src="www/bgservice.js" name="bgservice">
+        <clobbers target="bgservice" /> <!-- объект, к которому обращается приложение -->
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="bgservice">
+                <param name="android-package" value="web4u.plugin.bgservice"/> <!-- регистрируем главный java-класс -->
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <service android:name="web4u.service.bgservice" /> <!-- регистрируем фоновый процесс (сервис) -->
+        </config-file>
+
+        <framework src="com.android.support:support-v4:+" /> <!-- библиотека, содержащая необходимые java-классы  -->
+        <!-- основной java-файл --><source-file src="src/android/BgService.java" target-dir="src/web4u/plugin/"/>
+        <!-- java-файл, содержащий Service --><source-file src="src/android/BgServiceSrvs.java" target-dir="src/web4u/plugin/"/>
+    </platform>
+</plugin>

@@ -1,0 +1,23 @@
+{
+  "name": "web4u.plugin.bgservice",
+  "version": "1.0.0",
+  "description": "Background service for one task",
+  "cordova": {
+    "id": "web4u.plugin.bgservice",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "author": "Taruk",
+  "license": "ISC"
+}

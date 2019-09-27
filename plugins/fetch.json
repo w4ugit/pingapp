@@ -1,0 +1,18 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "web4u.plugin.bgservice": {
+    "source": {
+      "type": "local",
+      "path": "/Users/taruk/App/pingapp/node_modules/web4u.plugin.bgservice"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}
